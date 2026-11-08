@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#071126" />
+<title>تحميل LJM Clim</title>
+<link rel="icon" href="./icon-192.png" />
+<link rel="apple-touch-icon" href="./icon-180.png" />
+<style>
+  :root { --bg:#071126; --card:#0d2245; --line:#1f3f70; --text:#e6eefb; --muted:#9fb3d1; --cyan:#22d3ee; --green:#25d366; }
+  * { box-sizing: border-box; }
+  body { margin:0; background: radial-gradient(1200px 600px at 80% -10%, #12336a 0%, var(--bg) 55%); color:var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif; min-height:100vh; }
+  main { max-width: 520px; margin: 0 auto; padding: calc(28px + env(safe-area-inset-top)) 16px 40px; }
+  .logo { width:84px; height:84px; border-radius:20px; display:block; margin:0 auto 12px; box-shadow:0 12px 40px -10px rgba(34,211,238,.6); }
+  h1 { text-align:center; margin:0; font-size:30px; font-family: Inter, system-ui, sans-serif; letter-spacing:.3px; }
+  h1 span { color:var(--cyan); }
+  .tag { text-align:center; color:var(--cyan); font-weight:700; margin:4px 0 22px; }
+  .q { text-align:center; color:var(--muted); margin-bottom:12px; }
+  a.opt { display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); background:linear-gradient(180deg,#13305e,#0d2245); border:1px solid var(--line); border-radius:16px; padding:16px; margin:10px 0; }
+  a.opt:active { transform: scale(.99); }
+  .ic { font-size:30px; width:48px; text-align:center; }
+  .t { font-weight:800; font-size:18px; } .s { color:var(--muted); font-size:13.5px; }
+  .opt.mine { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(34,211,238,.25); }
+  details { background:rgba(13,34,69,.6); border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin-top:14px; color:var(--muted); font-size:14.5px; }
+  summary { cursor:pointer; color:var(--text); font-weight:700; }
+  ol { padding-inline-start: 20px; margin: 8px 0; }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="./icon-192.png" alt="" />
+  <h1>LJM <span>Clim</span></h1>
+  <div class="tag">المعلم ديالك فالكليماتيزاسيون، فالجيب</div>
+  <div class="q">اختار الجهاز ديالك:</div>
+
+  <a class="opt" id="ios" href="./">
+    <div class="ic">🍎</div>
+    <div><div class="t">iPhone / iPad</div><div class="s">حل التطبيق فـ Safari وزيدو للشاشة</div></div>
+  </a>
+  <a class="opt" id="android" href="./LJM-Clim.apk" download>
+    <div class="ic">🤖</div>
+    <div><div class="t">Android</div><div class="s">حمّل التطبيق (APK)</div></div>
+  </a>
+  <a class="opt" id="pc" href="https://github.com/mahdiljhr-lgtm/ljm-clim/releases/latest/download/LJM-Clim-Setup.exe">
+    <div class="ic">💻</div>
+    <div><div class="t">PC — Windows 10/11</div><div class="s">حمّل البرنامج وثبّتو</div></div>
+  </a>
+
+  <details id="h-ios"><summary>🍎 كيفاش نثبّت فالأيفون؟</summary>
+    <ol><li>حل الرابط فـ <b>Safari</b> (ماشي Chrome).</li><li>ضغط <b>Partager ⬆️</b> لتحت.</li><li>اختار <b>«Sur l’écran d’accueil»</b> ← <b>Ajouter</b>.</li><li>حل LJM Clim من الأيقونة، وفعّل الاشتراك من تما.</li></ol>
+  </details>
+  <details id="h-android"><summary>🤖 كيفاش نثبّت فالأندرويد؟</summary>
+    <ol><li>ضغط <b>Android</b> باش يتحمّل الملف.</li><li>حل الملف <b>LJM-Clim.apk</b> من التنزيلات.</li><li>إلا قال «source inconnue / Installer des applis inconnues»: سمح ليه ورجع.</li><li>ضغط <b>Installer</b>.</li></ol>
+  </details>
+  <details id="h-pc"><summary>💻 كيفاش نثبّت فالـ PC؟</summary>
+    <ol><li>حمّل الملف وحلّو.</li><li>إلا بان «Windows a protégé votre ordinateur»: <b>Informations complémentaires</b> ← <b>Exécuter quand même</b>.</li><li>Suivant ← Installer.</li></ol>
+  </details>
+  <footer>من بعد التثبيت: «اشتري الاشتراك» ← عمّر المعلومات ← تواصل معنا عبر WhatsApp.</footer>
+</main>
+<script>
+  // highlight the visitor's device
+  var ua = navigator.userAgent, id = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ? 'ios' : /Android/.test(ua) ? 'android' : 'pc';
+  document.getElementById(id).classList.add('mine');
+  document.getElementById('h-' + id).open = true;
+</script>
+</body>
+</html>
